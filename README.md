@@ -1,20 +1,22 @@
 # SharedChatRoom – Real-Time Chat App
-A full stack real-time chat web application built with React on the frontend and Node.js + WebSocket + MongoDB on the backend. 
+A full-stack real-time chat web application built with React on the frontend and Node.js + WebSocket + MongoDB on the backend. 
 It supports multiple concurrent users, stores messages in the database, and reflects messages in real time across all connected clients.
-
+NOTE: As the backend is hosted on a Free Render Instance, and may sleep after inactivity.
+If you see "Status: Disconnected" or errors at first, please wait for ~30-60 seconds.
+The server will automatically wake up, and chat will start working
 -- 
 
 # Deployment Links
-**Accesss the App: [https://sharedchatroom.netlify.app](https://sharedchatroom.netlify.app) /**
-Frontend(Netlify): [https://sharedchatroom.netlify.app](https://sharedchatroom.netlify.app)
-Backend(Render): [https://chat-backend-c7xe.onrender.com](https://chat-backend-c7xe.onrender.com)
+- **Accesss the App**: [https://sharedchatroom.netlify.app](https://sharedchatroom.netlify.app)
+- Frontend(Netlify): [https://sharedchatroom.netlify.app](https://sharedchatroom.netlify.app)
+- Backend(Render): [https://chat-backend-c7xe.onrender.com](https://chat-backend-c7xe.onrender.com)
 
 --
 
 # Features
-- Real time messaging
+- Real-time messaging
 - Message broadcast to all connected users
-- Reacent History of 50 messages
+- Recent History of 50 messages
 - No external Libraries used
 - Can handle multiple users
 
@@ -30,13 +32,13 @@ Clone the project: https://github.com/pranavsonawane5/Chat-App.git
 - cd backend
 - npm install
 - node index.js
-  server will run at http://localhost:4000
+  Server will run at http://localhost:4000
   
   Instructions for the frontend setup
 - cd frontend
 - npm install
 - npm run dev
-frontend will run at http://localhost:5173
+  Frontend will run at http://localhost:5173
 
 --
 
@@ -48,7 +50,7 @@ frontend will run at http://localhost:5173
   - ChatWindow - shows chat history
   - MessageInput - send new messages
 - Uses native WebSocket API to connect to the backend
-- Listens for incoming messags and updates chat window dynamically
+- Listens for incoming messages and updates the chat window dynamically
 
 --Backend--
 - Built with Node.js and ws Websocket Library
@@ -56,16 +58,29 @@ frontend will run at http://localhost:5173
   -Live user connections
   -In-memory chat history
 
-# Concurrency Handling and fronend backend communication
+--
+
+# Concurrency Handling and Frontend-Backend Communication
 - Each user connection is handled asynchronously
-- messages are broadcast in real time
+- Messages are broadcast in real time
 - Backend can support multiple concurrent users without blocking
-- React and Node communicate with using Websocket Protocols non traditional HTTP protocol
+- React and Node communicate using WebSocket Protocol non-traditional HTTP protocol
+
+--
 
 # Assumptions & Design Choices
-- No authentication - open username based login (authentication is future scope)
+- No authentication - open username-based login (authentication is a future scope)
 
+  --
+  
 # Accessing the Deployed App
 - Visit:[https://sharedchatroom.netlify.app](https://sharedchatroom.netlify.app)
 - Choose a username
 - Start Chatting in real-time with others online
+
+--
+
+# Preview
+- [Home Screen](assets/img1.png)
+- [Chats](assets/img2.png)
+- [](assets/img2.png) 
