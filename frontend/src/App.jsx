@@ -11,6 +11,7 @@ function App() {
   
   useEffect(()=>{
     if(username){
+      
       const socket = new WebSocket('wss://chat-backend-c7xe.onrender.com');
       ws.current = socket;
 
