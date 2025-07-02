@@ -1,9 +1,9 @@
 # SharedChatRoom – Real-Time Chat App
+
 A full-stack real-time chat web application built with React on the frontend and Node.js + WebSocket + MongoDB on the backend. 
 It supports multiple concurrent users, stores messages in the database, and reflects messages in real time across all connected clients.
-NOTE: As the backend is hosted on a Free Render Instance, and may sleep after inactivity.
-If you see "Status: Disconnected" or errors at first, please wait for ~30-60 seconds.
-The server will automatically wake up, and chat will start working
+# NOTE: As the backend is hosted on a Free Render Instance, and may sleep after inactivity. If you see "Status: Disconnected" or errors at first, please wait for ~30-60 seconds. The server will automatically wake up, and chat will start working
+
 -- 
 
 # Deployment Links
@@ -81,6 +81,6 @@ Clone the project: https://github.com/pranavsonawane5/Chat-App.git
 --
 
 # Preview
-- [Home Screen](assets/img1.png)
-- [Chats](assets/img2.png)
-- [](assets/img2.png) 
+![Home Screen](assets/img1.png)
+![Chats](assets/img2.png)
+![Message screen](assets/img2.png) 
