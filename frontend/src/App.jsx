@@ -11,7 +11,7 @@ function App() {
   
   useEffect(()=>{
     if(username){
-      const socket = new WebSocket('ws://localhost:4000');
+      const socket = new WebSocket('wss://chat-backend-c7xe.onrender.com');
       ws.current = socket;
 
       socket.onopen = () => {
