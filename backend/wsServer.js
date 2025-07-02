@@ -2,6 +2,7 @@ const WebSocket = require('ws');
 const Message = require('./models/Message');
 
 function setupWebSocket(server){
+    //initilaze the websocket on top of http server
     const wss = new WebSocket.Server({ server });
 
     wss.on('connection', (ws) => {
@@ -12,6 +13,7 @@ function setupWebSocket(server){
             try {
                 const data = JSON.parse(msg);
 
+                // initial connection which stores username and sends history
                 if(data.type === 'init')
                 {
                     username = data.username;
@@ -57,6 +59,7 @@ function setupWebSocket(server){
             }
         });
 
+        // when client disconnects
         ws.on('close', ()=>{
             console.log(`${username} disconnected`);
         });
