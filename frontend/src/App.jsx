@@ -11,7 +11,7 @@ function App() {
   
   useEffect(()=>{
     if(username){
-      
+      fetch('https://chat-backend-c7xe.onrender.com/ping').catch(() => {});
       const socket = new WebSocket('wss://chat-backend-c7xe.onrender.com');
       ws.current = socket;
 
@@ -65,6 +65,11 @@ function App() {
     <div style={{ padding: '2rem', fontFamily: 'Arial', maxWidth: '600px', margin: '0 auto' }}>
       <h2>Welcome, {username}</h2>
       <p>Status: {connected ? 'Online' : 'Disconnected'}</p>
+      {!connected && (
+      <p style={{ color: 'red' }}>
+        Backend may be sleeping. Please wait 30–60 seconds if this is your first time opening.
+      </p>
+      )}
       <ChatWindow messages={messages} currentUser={username}/>
       <MessageInput onSend={handleSendMessage} />
     </div>
